@@ -24,6 +24,17 @@ extension ViewController:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = indexPath.description
+        cell.detailTextLabel?.text = """
+            asdasfakjhfikasjfkljaslfjkajl lkdsjfalsk
+            asidjlkasjdkjskjfkasjkf
+            djaijdfikf fjiksf
+            dksfjskjflkdsj
+            fksjfksjfkllfkjgjgjamqijcv
+            cjasdmxkjasdkd
+            """
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.imageView?.image = UIImage(named: "\(indexPath.row%3)")
         return cell
     }
     
